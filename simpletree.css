@@ -1,0 +1,45 @@
+/* Simpletree default styling.
+licensed under MIT.
+
+by Evan Myller (emyller＠7ws.co)
+*/
+
+ul.simpletree {
+	font-family: sans-serif;
+	padding: 0;
+}
+
+	ul.simpletree li {
+		list-style: none;
+		position: relative;
+	}
+
+		ul.simpletree a,
+		ul.simpletree span {
+			color: inherit;
+			cursor: pointer;
+			display: block;
+			padding: 0.2em 0 0.2em 1em;
+			text-decoration: none;
+		}
+
+	ul.simpletree ul {
+		padding-left: 1em;
+	}
+
+/* arrow */
+ul.simpletree li._has_submenu > a:before,
+ul.simpletree li._has_submenu > span:before {
+	content: '›';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	width: 1em;
+	text-align: center;
+	transition: 250ms;
+}
+
+ul.simpletree li._has_submenu.selected > a:before,
+ul.simpletree li._has_submenu.selected > span:before {
+	transform: rotate(90deg);
+}
